@@ -44,6 +44,13 @@ $(document).ready(function() {
             $(".an_display").text("n");
         }
 
+        if (result === "invalid"){
+            $(".invalid_message").text("Please enter proper numeric values.");
+        }
+        else {
+            $(".invalid_message").text("");
+        }
+
         event.preventDefault();
     });
 });
