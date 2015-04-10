@@ -14,4 +14,11 @@ describe('triangle', function() {
     it("will return isoceles if all three sides are different lengths", function() {
         expect(triangle(2, 3, 4)).to.equal("isoceles");
     });
+    it("will return invalid if triangle is not valid, i.e. does not pass triangle inequality test (a+b>c, a+c>b, b+c>a)", function() {
+        expect(triangle(1, 2, 3)).to.equal("invalid")
+    });
+    it("will return invalid if triangle is not valid, i.e. does not pass triangle inequality test (a+b>c, a+c>b, b+c>a)", function() {
+        expect(triangle(1, 4, 10)).to.equal("invalid")
+    });
+
 });
