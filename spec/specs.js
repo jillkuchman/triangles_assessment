@@ -11,4 +11,7 @@ describe('triangle', function() {
     it("will return scalene if Side B and Side C are equal, but not equal to Side A", function() {
         expect(triangle(3, 2, 2)).to.equal("scalene");
     });
+    it("will return isoceles if all three sides are different lengths", function() {
+        expect(triangle(2, 3, 4)).to.equal("isoceles");
+    });
 });

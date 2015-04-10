@@ -4,9 +4,20 @@ function triangle(side_a, side_b, side_c) {
     if((side_a === side_b) && (side_a === side_c)) {
         type_of_triangle = "equilateral";
     }
-    else {
-        type_of_triangle = "scalene"
+    else if ((side_a === side_b) && (side_a !== side_c)) {
+        type_of_triangle = "scalene";
     }
+    else if ((side_a === side_c) && (side_a !== side_b)) {
+        type_of_triangle = "scalene";
+    }
+    else if ((side_b === side_c) && (side_a !== side_c)) {
+        type_of_triangle = "scalene";
+    }
+    else {
+        type_of_triangle = "isoceles";
+    }
+
+
 
     return type_of_triangle;
 }
