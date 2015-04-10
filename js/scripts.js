@@ -23,4 +23,29 @@ function triangle(side_a, side_b, side_c) {
     }
 
     return type_of_triangle;
-}
+};
+
+$(document).ready(function() {
+    $("form#triangle_input").submit(function(event) {
+        var user_side_a = $("input#side_a").val();
+        var user_side_b = $("input#side_b").val();
+        var user_side_c = $("input#side_c").val();
+        var user_triangle_type = triangle(user_side_a, user_side_b, user_side_c);
+
+        $("#result").show();
+        $(".side_a").text(user_side_a);
+        $(".side_b").text(user_side_b);
+        $(".side_c").text(user_side_c);
+
+        if (user_triangle_type === "scalene"){
+            $(".an_display").text("");
+        }
+        else {
+            $(".an_display").text("n");
+        }
+
+        $("#triangle_type").text(user_triangle_type);
+
+        event.preventDefault();
+    });
+});
