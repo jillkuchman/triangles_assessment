@@ -1,19 +1,15 @@
 function triangle(side_a, side_b, side_c) {
     var type_of_triangle;
 
-    var side_lengths = [side_a, side_b, side_c];
+    var side_lengths = [parseInt(side_a), parseInt(side_b), parseInt(side_c)];
 
-    var sorted = side_lengths.sort();
+    var sorted = side_lengths.sort(function compare(a, b) {return a - b;});
 
-    if(parseInt(sorted[0]) + parseInt(sorted[1]) > parseInt(sorted[2])) {
-        if  ( (parseInt(sorted[0]) === parseInt(sorted[1])) && (parseInt(sorted[0]) === parseInt(sorted[2])) ) {
+    if(sorted[0] + sorted[1] > sorted[2]) {
+        if  ( (sorted[0] === sorted[1]) && (sorted[0] === sorted[2]) ) {
             type_of_triangle = "equilateral";
         }
-        else if (
-            ((parseInt(sorted[0]) === parseInt(sorted[1])) && (parseInt(sorted[0]) !== parseInt(sorted[2])))
-            ||
-            ((parseInt(sorted[1]) === parseInt(sorted[2])) && (parseInt(sorted[0]) !== parseInt(sorted[2])))
-        ) {
+        else if ( ((sorted[0] === sorted[1]) && (sorted[0] !== sorted[2])) || ((sorted[1] === sorted[2]) && (sorted[0] !== sorted[2])) ) {
             type_of_triangle = "isoceles";
         }
         else {

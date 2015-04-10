@@ -18,6 +18,7 @@ describe('triangle', function() {
         expect(triangle(2, 3, 4)).to.equal("scalene");
     });
     it("will return invalid if triangle is not valid, i.e. does not pass triangle inequality test (a+b>c, a+c>b, b+c>a)", function() {
-        expect(triangle(2, 2, 8)).to.equal("invalid")
+        expect(triangle(8, 9, 77)).to.equal("invalid")
     });
+
 });
