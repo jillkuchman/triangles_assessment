@@ -15,25 +15,25 @@
             <form id="triangle_input">
                 <div class="form-group">
                     <label for="side_a">Side A:</label>
-                    <input type="int" id="side_a">
+                    <input type="int" id="side_a" required>
                 </div>
 
                 <div class="form-group">
                     <label for="side_b">Side B:</label>
-                    <input type="int" id="side_b">
+                    <input type="int" id="side_b" required>
                 </div>
 
                 <div class="form-group">
                     <label for="side_c">Side C:</label>
-                    <input type="int" id="side_c">
+                    <input type="int" id="side_c" required>
                 </div>
 
-                <button type="submit">Test!</button>
+                <button type="submit" class="btn btn-info">Test!</button>
             </form>
-
+            </br>
             <div id="result">
                 <p>
-                    A triangle with side lengths of <span class="side_a"></span>, <span class="side_b"></span>, and <span class="side_c"></span> is a<span class="an_display"></span> <span id="triangle_type"></span> triangle.
+                    A triangle with side lengths of <span class="side_a"></span>, <span class="side_b"></span>, and <span class="side_c"></span> is a<span class="an_display"></span> <span id="triangle_type" style="bold"></span> triangle.
                 </p>
             </div>
         </div>

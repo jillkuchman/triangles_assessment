@@ -1,7 +1,7 @@
 function triangle(side_a, side_b, side_c) {
     var type_of_triangle;
 
-    var side_lengths = [parseInt(side_a), parseInt(side_b), parseInt(side_c)];
+    var side_lengths = [parseFloat(side_a), parseFloat(side_b), parseFloat(side_c)];
 
     var sorted = side_lengths.sort(function compare(a, b) {return a - b;});
 
@@ -25,9 +25,9 @@ function triangle(side_a, side_b, side_c) {
 
 $(document).ready(function() {
     $("form#triangle_input").submit(function(event) {
-        var user_side_a = parseInt($("input#side_a").val());
-        var user_side_b = parseInt($("input#side_b").val());
-        var user_side_c = parseInt($("input#side_c").val());
+        var user_side_a = $("input#side_a").val();
+        var user_side_b = $("input#side_b").val();
+        var user_side_c = $("input#side_c").val();
 
         var result = triangle(user_side_a, user_side_b, user_side_c);
 
@@ -37,14 +37,12 @@ $(document).ready(function() {
         $(".side_c").text(user_side_c);
         $("#triangle_type").text(result);
 
-
         if (result === "scalene"){
             $(".an_display").text("");
         }
         else {
             $(".an_display").text("n");
         }
-
 
         event.preventDefault();
     });

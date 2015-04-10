@@ -15,9 +15,8 @@ This web app determines the type of triangle from the user input of the three si
 To use the app:
 <br/>
 <ol>
-<li>Clone this git repository</li>
-<li>\c shoes;</li>
-<li>Start the web app by loading <span style="font-family:'Courier New'">triangle_test.html</span> in your browser</li>
+    <li>Clone this git repository</li>
+    <li>Start the web app by loading triangle_test.html in your browser</li>
 </ol>
 
 To edit the app, download the source code and open it in your text editor.
