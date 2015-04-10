@@ -17,8 +17,14 @@ describe('triangle', function() {
     it("will return scalene if all three sides are different lengths", function() {
         expect(triangle(2, 3, 4)).to.equal("scalene");
     });
-    it("will return invalid if triangle is not valid, i.e. does not pass triangle inequality test (a+b>c, a+c>b, b+c>a)", function() {
+    it("will return invalid if triangle lengths do not pass triangle inequality test (a+b>c, a+c>b, b+c>a)", function() {
         expect(triangle(8, 9, 77)).to.equal("invalid")
+    });
+    it("will return invalid if triangle lengths include 0", function() {
+        expect(triangle(8, 9, 0)).to.equal("invalid")
+    });
+    it("will return invalid if triangle lengths include strings", function() {
+        expect(triangle("one", "one", "LIZARD")).to.equal("invalid")
     });
 
 });

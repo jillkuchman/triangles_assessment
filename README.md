@@ -24,7 +24,7 @@ To edit the app, download the source code and open it in your text editor.
 
 ####Copyright © 2015 Jill Kuchman
 
-####License: [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
+####License: [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE) []
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
