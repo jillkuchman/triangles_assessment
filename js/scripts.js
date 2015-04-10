@@ -1,8 +1,5 @@
 function triangle(side_a, side_b, side_c) {
     var type_of_triangle;
-    console.log("side a: " + side_a);
-    console.log("side b: " + side_b);
-    console.log("side c: " + side_c);
 
     if((side_a === side_b) && (side_a === side_c)) {
         type_of_triangle = "equilateral";
