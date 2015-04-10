@@ -4,7 +4,6 @@ function triangle(side_a, side_b, side_c) {
     var side_lengths = [side_a, side_b, side_c];
 
     var sorted = side_lengths.sort();
-    console.log(sorted);
 
     if(parseInt(sorted[0]) + parseInt(sorted[1]) > parseInt(sorted[2])) {
         if  ( (parseInt(sorted[0]) === parseInt(sorted[1])) && (parseInt(sorted[0]) === parseInt(sorted[2])) ) {
